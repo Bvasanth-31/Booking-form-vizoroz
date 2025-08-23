@@ -1,0 +1,145 @@
+
+.app-container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+
+.form-container {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  gap: 20px;
+  width: 98%;
+  margin-left: 10px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input:read-only {
+  background-color: #f2f2f2;
+}
+
+span {
+  color: red;
+  font-size: 12px;
+}
+
+
+.submit-button:hover {
+  background-color: #276B46; 
+}
+
+
+@media (max-width: 992px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+
+.submit-btn {
+  padding: 10px 20px;
+  background-color: #2E8B57;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  position: relative;
+  min-width: 100px;
+   transition: background-color 0.3s ease;
+   display: inline-block;
+  width: auto; 
+  align-self: center;
+}
+
+.submit-btn:disabled {
+  background-color: #90caf9;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  border-top: 3px solid #1976d2;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (max-width: 576px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .submit-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  input,
+  select {
+    font-size: 16px;
+  }
+
+  .app-container {
+    padding: 15px;
+    margin: 15px;
+  }
+} 
+
+

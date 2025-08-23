@@ -1,0 +1,44 @@
+.app-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.MuiDataGrid-root {
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.MuiDataGrid-columnHeaders {
+  background-color: #f0f0f0;
+  font-weight: 600;
+}
+
+.MuiDataGrid-cell {
+  font-size: 14px;
+  color: #333;
+}
+
+.MuiButton-root {
+  text-transform: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+
+
