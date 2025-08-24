@@ -41,7 +41,7 @@ const Form = () => {
 
         useEffect(() => {
         if (id) {
-            axios.get(`http://localhost:5181/api/booking/${id}`)
+            axios.get(`https://backend-project-form-g6hjdwhhb6cjhgac.centralus-01.azurewebsites.net/api/booking/${id}`)
                 .then(res => {
                     const data = res.data;
                     setFormData({
@@ -169,11 +169,11 @@ const Form = () => {
 
                 if (id) {
                     
-                    await axios.put(`http://localhost:5181/api/booking/${id}`, payload);
+                    await axios.put(`https://backend-project-form-g6hjdwhhb6cjhgac.centralus-01.azurewebsites.net/api/booking/${id}`, payload);
                      toast.success("Booking updated successfully! ");
                 } else {
                     
-                    await axios.post("http://localhost:5181/api/booking", payload);
+                    await axios.post("https://backend-project-form-g6hjdwhhb6cjhgac.centralus-01.azurewebsites.net/api/booking", payload);
                      toast.success("Booking created successfully! ");
                 }
 

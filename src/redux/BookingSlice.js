@@ -6,7 +6,7 @@ export const fetchBookings = createAsyncThunk(
   'booking/fetchBookings',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get('http://localhost:5181/api/booking');
+      const response = await axios.get('https://backend-project-form-g6hjdwhhb6cjhgac.centralus-01.azurewebsites.net/api/booking');
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data || 'Error fetching bookings');
@@ -18,7 +18,7 @@ export const submitBooking = createAsyncThunk(
   'booking/submitBooking',
   async (formData, { rejectWithValue }) => {
     try {
-      const response = await axios.post('http://localhost:5181/api/booking', formData);
+      const response = await axios.post('https://backend-project-form-g6hjdwhhb6cjhgac.centralus-01.azurewebsites.net/api/booking', formData);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data || 'Error submitting booking');
@@ -30,7 +30,7 @@ export const deleteBooking = createAsyncThunk(
   'booking/deleteBooking',
   async (id, { rejectWithValue }) => {
     try {
-      await axios.delete(`http://localhost:5181/api/booking/${id}`);
+      await axios.delete(`https://backend-project-form-g6hjdwhhb6cjhgac.centralus-01.azurewebsites.net/api/booking/${id}`);
       return id;
     } catch (error) {
       return rejectWithValue(error.response?.data || 'Failed to delete');
@@ -42,7 +42,7 @@ export const updateBooking = createAsyncThunk(
   'booking/updateBooking',
   async ({ id, formData }, { rejectWithValue }) => {
     try {
-      const response = await axios.put(`http://localhost:5181/api/booking/${id}`, formData);
+      const response = await axios.put(`https://backend-project-form-g6hjdwhhb6cjhgac.centralus-01.azurewebsites.net/api/booking/${id}`, formData);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data || 'Failed to update booking');
